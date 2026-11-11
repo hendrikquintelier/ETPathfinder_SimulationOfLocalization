@@ -49,9 +49,11 @@ $$
 
 The true geometric direction, relative to the array midpoint and measured from positive $x$, is
 
+
 $$
-\theta_{\mathrm{true}}=\operatorname{atan2}(y-d/2,x).
+\theta_{\mathrm{true}} = \mathrm{atan2}\left(y-\frac{d}{2}, x\right)
 $$
+
 
 The absolute angular error is
 
