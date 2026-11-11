@@ -29,37 +29,37 @@ Default parameters:
 
 The main mathematical functions are intentionally separated from grid evaluation and plotting so the calculations can be reviewed independently.
 
-For a candidate source at \(S=(x,y)\), the propagation distances are
+For a candidate source at $S=(x,y)$, the propagation distances are
 
-\[
+$$
 r_1=\sqrt{x^2+y^2},\qquad r_2=\sqrt{x^2+(y-d)^2}.
-\]
+$$
 
 The spherical-path phase difference (unwrapped) is
 
-\[
+$$
 \Delta\phi=\frac{2\pi}{\lambda}(r_1-r_2),\qquad \lambda=\frac{c}{f}.
-\]
+$$
 
 That phase difference is then deliberately passed through the **plane-wave** estimator:
 
-\[
+$$
 \hat\theta=\arcsin\left(\frac{\Delta\phi\lambda}{2\pi d}\right).
-\]
+$$
 
-The true geometric direction, relative to the array midpoint and measured from positive \(x\), is
+The true geometric direction, relative to the array midpoint and measured from positive $x$, is
 
-\[
+$$
 \theta_{\mathrm{true}}=\operatorname{atan2}(y-d/2,x).
-\]
+$$
 
 The absolute angular error is
 
-\[
+$$
 \epsilon_\theta=|\hat\theta-\theta_{\mathrm{true}}|.
-\]
+$$
 
-**Important:** The expression for \(\hat\theta\) is *not* a dedicated spherical-wave localization estimator. It is the conventional plane-wave estimator tested against spherical-wave propagation.
+**Important:** The expression for $\hat\theta$ is *not* a dedicated spherical-wave localization estimator. It is the conventional plane-wave estimator tested against spherical-wave propagation.
 
 In the script, inspect the **`MATH MODEL`** section first:
 
